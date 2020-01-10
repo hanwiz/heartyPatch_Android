@@ -476,15 +476,14 @@ public class InfoActivity extends AppCompatActivity implements BleManager.BleMan
             int flag = characteristic.getProperties();
             int format = -1;
 
-            if ((flag & 0x01) != 0)
-            {
-                format = BluetoothGattCharacteristic.FORMAT_UINT16;
-                Log.d("akw", "Heart rate format UINT16.");
-            } else
-                {
+//            if ((flag & 0x01) != 0)
+//            {
+//                format = BluetoothGattCharacteristic.FORMAT_UINT16;
+//                Log.d("akw", "Heart rate format UINT16.");
+//            } else {
                 format = BluetoothGattCharacteristic.FORMAT_UINT8;
                 Log.d("akw", "Heart rate format UINT8.");
-            }
+//            }
 
             if ((flag & 0x04) != 0)
             {
